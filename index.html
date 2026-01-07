@@ -3,22 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frans Electric | Professional Electrical Contractor</title>
-    <link rel="shortcut icon" href="image.png" type="image/x-icon">
+    <title>Frans Electric | Professional Electrical Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #FF9800;
-            --primary-dark: #F57C00;
-            --secondary: #2C3E50;
-            --light: #F5F7FA;
-            --dark: #333333;
-            --gray: #7F8C8D;
-            --success: #27AE60;
-            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
+        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -26,16 +14,10 @@
         }
         
         body {
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: var(--dark);
-            background-color: var(--light);
-        }
-        
-        h1, h2, h3, h4 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            margin-bottom: 1rem;
+            color: #333;
+            background-color: #f9f9f9;
         }
         
         .container {
@@ -47,19 +29,18 @@
         
         /* Header Styles */
         header {
-            background-color: var(--secondary);
+            background: linear-gradient(to right, #1a3a8f, #2a5bd7);
             color: white;
-            padding: 1.5rem 0;
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            padding: 20px 0;
+            position: relative;
+            overflow: hidden;
         }
         
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
         
         .logo {
@@ -69,116 +50,118 @@
         }
         
         .logo-icon {
-            font-size: 2.5rem;
-            color: var(--primary);
+            background-color: #ffcc00;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
         }
         
-        .logo h1 {
-            font-size: 1.8rem;
-            margin-bottom: 0;
+        .logo-text h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
         }
         
-        .logo p {
-            font-size: 0.9rem;
+        .logo-text p {
+            font-size: 16px;
             opacity: 0.9;
         }
         
         .contact-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.1rem;
+            text-align: right;
         }
         
-        .contact-header i {
-            color: var(--primary);
+        .phone-header {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .tagline {
+            font-size: 16px;
+            font-style: italic;
+            opacity: 0.9;
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 5rem 0;
+            padding: 80px 0;
             text-align: center;
         }
         
         .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 36px;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
         }
         
         .cta-button {
             display: inline-block;
-            background-color: var(--primary);
-            color: white;
+            background-color: #ffcc00;
+            color: #1a3a8f;
             padding: 15px 35px;
-            border-radius: 5px;
-            font-weight: 600;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
             text-decoration: none;
             transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 1.1rem;
         }
         
         .cta-button:hover {
-            background-color: var(--primary-dark);
+            background-color: #ffd633;
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
         /* Services Section */
-        .services {
-            padding: 5rem 0;
-            background-color: white;
-        }
-        
         .section-title {
             text-align: center;
-            margin-bottom: 3rem;
-            color: var(--secondary);
-        }
-        
-        .section-title h2 {
-            font-size: 2.2rem;
+            margin: 50px 0 30px;
+            font-size: 32px;
+            color: #1a3a8f;
             position: relative;
-            display: inline-block;
-            padding-bottom: 15px;
         }
         
-        .section-title h2::after {
+        .section-title:after {
             content: '';
             position: absolute;
             width: 80px;
             height: 4px;
-            background-color: var(--primary);
-            bottom: 0;
+            background-color: #ffcc00;
+            bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
         }
         
         .service-card {
-            background-color: var(--light);
-            border-radius: 8px;
+            background-color: white;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: var(--shadow);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
-            padding: 30px 25px;
-            text-align: center;
         }
         
         .service-card:hover {
@@ -186,266 +169,268 @@
         }
         
         .service-icon {
-            font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 20px;
+            background-color: #1a3a8f;
+            color: white;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
         }
         
-        .service-card h3 {
-            color: var(--secondary);
-            font-size: 1.4rem;
+        .service-content {
+            padding: 25px;
         }
         
-        /* Contact Form Section */
-        .contact {
-            padding: 5rem 0;
-            background-color: #f9f9f9;
+        .service-content h3 {
+            color: #1a3a8f;
+            margin-bottom: 15px;
+            font-size: 22px;
         }
         
-        .contact-wrapper {
+        /* Contact Form */
+        .contact-section {
+            background-color: #f0f5ff;
+            padding: 50px 0;
+        }
+        
+        .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
-            align-items: start;
         }
         
         .contact-info h3 {
-            color: var(--secondary);
-            margin-bottom: 1.5rem;
+            color: #1a3a8f;
+            margin-bottom: 20px;
+            font-size: 26px;
         }
         
-        .contact-detail {
+        .contact-details {
+            margin-top: 30px;
+        }
+        
+        .contact-item {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             margin-bottom: 20px;
         }
         
-        .contact-detail i {
-            background-color: var(--primary);
-            color: white;
-            width: 45px;
-            height: 45px;
+        .contact-icon {
+            background-color: #ffcc00;
+            color: #1a3a8f;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-right: 15px;
-            font-size: 1.2rem;
-        }
-        
-        .contact-form {
-            background-color: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
+            flex-shrink: 0;
         }
         
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         
         .form-group label {
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
-            color: var(--secondary);
+            color: #333;
         }
         
         .form-control {
             width: 100%;
-            padding: 15px;
+            padding: 12px 15px;
             border: 1px solid #ddd;
             border-radius: 5px;
-            font-size: 1rem;
-            transition: border 0.3s ease;
+            font-size: 16px;
+            transition: border 0.3s;
         }
         
         .form-control:focus {
-            border-color: var(--primary);
             outline: none;
+            border-color: #1a3a8f;
         }
         
-        /* Testimonials Section */
-        .testimonials {
-            padding: 5rem 0;
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: #1a3a8f;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background-color: #2a5bd7;
+        }
+        
+        /* Testimonials */
+        .testimonial {
             background-color: white;
-        }
-        
-        .testimonial-slider {
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px auto;
             max-width: 800px;
-            margin: 0 auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             position: relative;
         }
         
-        .testimonial {
-            background-color: var(--light);
-            padding: 30px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            margin: 20px;
+        .testimonial:before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 80px;
+            color: #ffcc00;
+            opacity: 0.3;
+            font-family: Georgia, serif;
         }
         
-        .testimonial-text {
+        .testimonial p {
+            font-size: 18px;
             font-style: italic;
             margin-bottom: 20px;
-            font-size: 1.1rem;
+            line-height: 1.7;
         }
         
         .testimonial-author {
-            font-weight: 600;
-            color: var(--secondary);
+            font-weight: bold;
+            color: #1a3a8f;
+            text-align: right;
         }
         
         /* Footer */
         footer {
-            background-color: var(--secondary);
+            background-color: #1a3a8f;
             color: white;
-            padding: 3rem 0 1.5rem;
+            padding: 50px 0 20px;
+            margin-top: 50px;
         }
         
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
-            margin-bottom: 2rem;
+            margin-bottom: 40px;
         }
         
-        .footer-column h3 {
-            color: white;
-            font-size: 1.4rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 10px;
+        .footer-section h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #ffcc00;
         }
         
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            width: 50px;
-            height: 3px;
-            background-color: var(--primary);
-            bottom: 0;
-            left: 0;
+        .footer-links {
+            list-style: none;
         }
         
         .footer-links li {
-            list-style: none;
             margin-bottom: 10px;
         }
         
         .footer-links a {
             color: #ddd;
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: color 0.3s;
         }
         
         .footer-links a:hover {
-            color: var(--primary);
-        }
-        
-        .footer-links i {
-            margin-right: 10px;
-            color: var(--primary);
+            color: #ffcc00;
         }
         
         .copyright {
             text-align: center;
-            padding-top: 1.5rem;
+            padding-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
+            font-size: 14px;
             color: #aaa;
+        }
+        
+        /* Emergency Banner */
+        .emergency-banner {
+            background-color: #ffcc00;
+            color: #1a3a8f;
+            padding: 15px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
         }
         
         /* Responsive Styles */
         @media (max-width: 992px) {
-            .contact-wrapper {
+            .contact-container {
                 grid-template-columns: 1fr;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .contact-header {
+                text-align: center;
             }
         }
         
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 20px;
-                text-align: center;
-            }
-            
             .hero h2 {
-                font-size: 2rem;
+                font-size: 28px;
             }
             
             .hero p {
-                font-size: 1rem;
+                font-size: 16px;
             }
             
-            .contact-form {
-                padding: 30px 20px;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .hero {
-                padding: 3rem 0;
+            .services-grid {
+                grid-template-columns: 1fr;
             }
             
-            .services, .contact, .testimonials {
-                padding: 3rem 0;
+            .section-title {
+                font-size: 28px;
             }
-            
-            .service-card {
-                padding: 25px 20px;
-            }
-        }
-        
-        /* Animation for form submission */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.5s ease forwards;
-        }
-        
-        /* Form submission message */
-        .form-message {
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            text-align: center;
-            display: none;
-        }
-        
-        .form-message.success {
-            background-color: rgba(39, 174, 96, 0.1);
-            color: var(--success);
-            border: 1px solid var(--success);
-            display: block;
-        }
-        
-        .form-message.error {
-            background-color: rgba(231, 76, 60, 0.1);
-            color: #e74c3c;
-            border: 1px solid #e74c3c;
-            display: block;
         }
     </style>
 </head>
 <body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        <i class="fas fa-exclamation-triangle"></i> Emergency electrical services available 24/7 - Call 072 195 8106
+    </div>
+
     <!-- Header -->
     <header>
-        <div class="container header-content">
-            <div class="logo">
-                <i class="fas fa-bolt logo-icon"></i>
-                <div>
-                    <h1>Frans Electric</h1>
-                    <p>Professional Electrical Contractor</p>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Frans Electric</h1>
+                        <p>Professional Electrical Contractor</p>
+                    </div>
                 </div>
-            </div>
-            <div class="contact-header">
-                <i class="fas fa-phone"></i>
-                <span>072 195 8106</span>
+                <div class="contact-header">
+                    <div class="phone-header">
+                        <i class="fas fa-phone"></i> 072 195 8106
+                    </div>
+                    <div class="tagline">
+                        Your Electrical Problem is My Concern!
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -453,61 +438,111 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h2>Your Electrical Problem is My Concern!</h2>
-            <p>Professional, reliable electrical services for domestic and industrial clients. From new installations to emergency repairs, we provide certified electrical solutions with a commitment to safety and quality.</p>
+            <h2>Professional Electrical Services for Domestic & Industrial Clients</h2>
+            <p>From new installations to emergency repairs, we provide certified electrical solutions with a commitment to safety and quality. Serving the community since 2010.</p>
             <a href="#contact" class="cta-button">Get a Free Quote</a>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Electrical Services</h2>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-tools service-icon"></i>
+    <section class="container">
+        <h2 class="section-title">Our Electrical Services</h2>
+        
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-wrench"></i>
+                </div>
+                <div class="service-content">
                     <h3>New Installations</h3>
                     <p>Complete electrical installations for homes, offices, and industrial facilities with compliance to all safety standards.</p>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-search service-icon"></i>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="service-content">
                     <h3>Fault Finding</h3>
                     <p>Diagnosing and repairing electrical faults quickly and efficiently to minimize downtime and ensure safety.</p>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-file-certificate service-icon"></i>
+            </div>
+            
+            <!-- Service 3 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div class="service-content">
                     <h3>Certificate of Compliance</h3>
                     <p>Official certification for all electrical work to meet legal requirements and insurance standards.</p>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-car-battery service-icon"></i>
+            </div>
+            
+            <!-- Service 4 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-generator"></i>
+                </div>
+                <div class="service-content">
                     <h3>Generator Installations & Repair</h3>
                     <p>Installation, maintenance, and repair of backup generators for uninterrupted power supply.</p>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-home service-icon"></i>
+            </div>
+            
+            <!-- Service 5 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <div class="service-content">
                     <h3>Domestic & Industrial</h3>
                     <p>Comprehensive electrical services for both residential homes and industrial facilities.</p>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-bolt service-icon"></i>
+            </div>
+            
+            <!-- Service 6 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="service-content">
                     <h3>Main Cable Supply & Fault Finding</h3>
                     <p>Installation and troubleshooting of main electrical cable supplies for properties.</p>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-solar-panel service-icon"></i>
+            </div>
+            
+            <!-- Service 7 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-solar-panel"></i>
+                </div>
+                <div class="service-content">
                     <h3>Solar Installations</h3>
                     <p>Professional installation of solar power systems for energy efficiency and cost savings.</p>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-thermometer-half service-icon"></i>
+            </div>
+            
+            <!-- Service 8 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-thermometer-half"></i>
+                </div>
+                <div class="service-content">
                     <h3>Underfloor Heating Repairs</h3>
                     <p>Specialized repair services for underfloor heating systems to restore warmth and efficiency.</p>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-server service-icon"></i>
+            </div>
+            
+            <!-- Service 9 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <div class="service-content">
                     <h3>UPS Systems</h3>
                     <p>Uninterruptible Power Supply installation and maintenance to protect sensitive equipment.</p>
                 </div>
@@ -515,48 +550,63 @@
         </div>
     </section>
 
-    <!-- Contact Form Section -->
-    <section class="contact" id="contact">
+    <!-- Testimonial Section -->
+    <section class="container">
+        <h2 class="section-title">What Our Clients Say</h2>
+        
+        <div class="testimonial">
+            <p>Frans Electric repaired a major fault in our factory's main supply. They were prompt, professional, and got us back up and running with minimal downtime. Highly recommended!</p>
+            <div class="testimonial-author">- James Wilson, Factory Manager</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
         <div class="container">
-            <div class="section-title">
-                <h2>Contact Us for a Free Quote</h2>
-            </div>
-            <div class="contact-wrapper">
+            <h2 class="section-title">Contact Us for a Free Quote</h2>
+            
+            <div class="contact-container">
                 <div class="contact-info">
                     <h3>Get in Touch</h3>
                     <p>Submit your details and we will contact you to discuss your electrical needs. We respond to all inquiries within 24 hours.</p>
                     
-                    <div class="contact-detail">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>072 195 8106</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>072 195 8106</p>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="contact-detail">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>Working Hours</h4>
-                            <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
-                            <p>Sat: 9:00 AM - 1:00 PM</p>
-                            <p>Emergency services available 24/7</p>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Working Hours</h4>
+                                <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
+                                <p>Sat: 9:00 AM - 1:00 PM</p>
+                                <p><strong>Emergency services available 24/7</strong></p>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="contact-detail">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Service Area</h4>
-                            <p>Domestic and Industrial services throughout the region</p>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Service Area</h4>
+                                <p>Domestic and Industrial services throughout the region</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="contact-form">
-                    <div id="form-message" class="form-message"></div>
-                    
-                    <form id="contact-form">
+                    <form id="quoteForm">
                         <div class="form-group">
                             <label for="name">Name *</label>
                             <input type="text" id="name" class="form-control" required>
@@ -579,28 +629,11 @@
                         
                         <div class="form-group">
                             <label for="problem">Describe Your Electrical Problem</label>
-                            <textarea id="problem" class="form-control" rows="4" placeholder="Please describe the electrical issue you're experiencing..."></textarea>
+                            <textarea id="problem" class="form-control" placeholder="Please describe the electrical issue you're experiencing..."></textarea>
                         </div>
                         
-                        <button type="submit" class="cta-button" style="width: 100%;">
-                            <i class="fas fa-paper-plane"></i> Submit Request
-                        </button>
+                        <button type="submit" class="submit-btn">Submit Request</button>
                     </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>What Our Clients Say</h2>
-            </div>
-            <div class="testimonial-slider">
-                <div class="testimonial">
-                    <p class="testimonial-text">"Frans Electric repaired a major fault in our factory's main supply. They were prompt, professional, and got us back up and running with minimal downtime. Highly recommended!"</p>
-                    <p class="testimonial-author">- James Wilson, Factory Manager</p>
                 </div>
             </div>
         </div>
@@ -610,45 +643,42 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-column">
+                <div class="footer-section">
                     <h3>Frans Electric</h3>
                     <p>Professional electrical contractor providing reliable and certified electrical services for domestic and industrial clients since 2010.</p>
-                    <div class="contact-detail" style="color: #ddd; margin-top: 20px;">
-                        <i class="fas fa-phone"></i>
-                        <span>072 195 8106</span>
-                    </div>
+                    <p><i class="fas fa-phone"></i> 072 195 8106</p>
                 </div>
                 
-                <div class="footer-column">
+                <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Services</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-column">
+                <div class="footer-section">
                     <h3>Our Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-bolt"></i> New Installations</a></li>
-                        <li><a href="#"><i class="fas fa-search"></i> Fault Finding</a></li>
-                        <li><a href="#"><i class="fas fa-solar-panel"></i> Solar Installations</a></li>
-                        <li><a href="#"><i class="fas fa-car-battery"></i> Generator Services</a></li>
+                        <li><a href="#">New Installations</a></li>
+                        <li><a href="#">Fault Finding</a></li>
+                        <li><a href="#">Solar Installations</a></li>
+                        <li><a href="#">Generator Services</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Frans Electric. All rights reserved. | Electrical Contractor License: EC12345</p>
+                <p>© 2023 Frans Electric. All rights reserved. | Electrical Contractor License: EC12345</p>
+                <p>This is a preview of the updated Frans Electric website</p>
             </div>
         </div>
     </footer>
 
     <script>
         // Form submission handling
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Get form values
@@ -658,30 +688,13 @@
             const phone = document.getElementById('phone').value;
             const problem = document.getElementById('problem').value;
             
-            // Simple validation
-            if (!name || !surname || !email || !phone) {
-                showMessage('Please fill in all required fields.', 'error');
-                return;
-            }
+            // In a real implementation, you would send this data to a server
+            // For this preview, we'll just show an alert
+            alert(`Thank you ${name} ${surname}! Your request has been submitted. We will contact you at ${phone} or ${email} within 24 hours to discuss your electrical problem: "${problem.substring(0, 50)}..."`);
             
-            // In a real application, you would send this data to a server
-            // For demo purposes, we'll just show a success message
-            showMessage(`Thank you ${name} ${surname}! Your request has been submitted. We will contact you at ${email} or ${phone} within 24 hours.`, 'success');
-            
-            // Reset form
-            document.getElementById('contact-form').reset();
+            // Reset the form
+            document.getElementById('quoteForm').reset();
         });
-        
-        function showMessage(text, type) {
-            const messageDiv = document.getElementById('form-message');
-            messageDiv.textContent = text;
-            messageDiv.className = `form-message ${type} fade-in`;
-            
-            // Hide message after 5 seconds
-            setTimeout(() => {
-                messageDiv.style.display = 'none';
-            }, 5000);
-        }
         
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -689,35 +702,16 @@
                 e.preventDefault();
                 
                 const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
+                if(targetId === '#') return;
                 
                 const targetElement = document.querySelector(targetId);
-                if (targetElement) {
+                if(targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
                 }
             });
-        });
-        
-        // Add animation to service cards on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, observerOptions);
-        
-        // Observe service cards
-        document.querySelectorAll('.service-card').forEach(card => {
-            observer.observe(card);
         });
     </script>
 </body>
